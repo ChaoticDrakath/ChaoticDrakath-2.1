@@ -55,9 +55,9 @@ async def level_up(users, user, channel):
 @client.command(pass_context = True)
 @commands.has_permissions(send_messages=True)
 async def rank(ctx):
-        user = user.mention
-        level = lvl_end
-        exp = users[user.id]['experience']
-await client.say(f"{user} your current rank is {level} and you currently have {exp}."
+    user = user.mention
+    level = lvl_end
+    exp = users[user.id]['experience']
+    await client.say(f"{user} your current rank is {level} and you currently have {exp}."
    
 client.run(os.getenv('Token'))
