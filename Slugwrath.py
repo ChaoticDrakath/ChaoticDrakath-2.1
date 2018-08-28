@@ -1,4 +1,4 @@
-import disco
+import discord
 import asyncio
 import json
 import os
