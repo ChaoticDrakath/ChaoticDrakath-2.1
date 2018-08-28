@@ -52,7 +52,7 @@ async def level_up(users, user, channel):
         users[user.id]['level'] = lvl_end  
         
         
-@client.command(pass_context = True)
+@client.command(pass_context=True)
 @commands.has_permissions(send_messages=True)
 async def rank(ctx):
     user = ctx.message.author.mention
