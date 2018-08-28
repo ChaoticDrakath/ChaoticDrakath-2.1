@@ -4,15 +4,21 @@ import json
 import os
 from discord.ext import commands
 
-client = Bot(description="I am ImmortalBOT and i love being immortal!", command_prefix="immortal ", pm_help = True)
-client.remove_command('help')
+bot = commands.Bot(command_prefix='?', description=description)
+
+@bot.event
+async def on_ready():
+    print('Logged in as')
+    print(bot.user.name)
+    print(bot.user.id)
+    print('------')
 
 
-@client.event
+@bot.event
 async def on_ready():
     print('bot online')
   
-@client.event
+@bot.event
 async def on_member_join(member):
     with open('users.json', 'r') as f:
         users = json.load(f)
@@ -22,7 +28,7 @@ async def on_member_join(member):
     with open ('users.json', 'w') as f:
         json.dump(users, f)
   
-@client.event
+@bot.event
 async def on_message(message):
     with open('users.json', 'r') as f:
         users = json.load(f)
@@ -54,7 +60,7 @@ async def level_up(users, user, channel):
         users[user.id]['level'] = lvl_end  
         
         
-@client.command(pass_context=True)
+@bot.command(pass_context=True)
 @commands.has_permissions(send_messages=True)
 async def rank(ctx):
     user = ctx.message.author.mention
@@ -63,4 +69,4 @@ async def rank(ctx):
     await client.say(f"{user} your current rank is {level} and you currently have {exp}.")
    
                      
-client.run(os.getenv('Token'))
+bot.run(os.getenv('Token'))
