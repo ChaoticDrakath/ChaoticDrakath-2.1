@@ -51,4 +51,4 @@ async def level_up(users, user, channel):
         await client.send_message(channel, '{} has leveled up to level {}'.format(user.mention, lvl_end))
         users[user.id]['level'] = lvl_end  
    
-client.run(os.getenv('Token.'))
+client.run(os.getenv('Token'))
