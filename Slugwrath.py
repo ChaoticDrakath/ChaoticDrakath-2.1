@@ -4,7 +4,9 @@ import json
 import os
 from discord.ext import commands
 
-client = Bot
+client = Bot(description="I am ImmortalBOT and i love being immortal!", command_prefix="immortal ", pm_help = True)
+client.remove_command('help')
+
 
 @client.event
 async def on_ready():
