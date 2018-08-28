@@ -57,8 +57,8 @@ async def level_up(users, user, channel):
 async def rank(ctx):
     user = ctx.message.author.mention
     level = lvl_end
-    exp = users[ctx.message.author.id]['experience']
-    await client.say(f"{user} your current rank is {level} and you currently have {exp}.)"
+    exp = users[user.id['experience']
+    await client.say(f"{user} your current rank is {level} and you currently have {exp}.")
    
                      
 client.run(os.getenv('Token'))
