@@ -4,7 +4,7 @@ import json
 import os
 from discord.ext import commands
 
-client = discord.Client()
+client = Bot
 
 @client.event
 async def on_ready():
