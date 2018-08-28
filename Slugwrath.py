@@ -18,7 +18,7 @@ async def on_member_join(member):
     await update_data(users, member)
     
     with open ('users.json', 'w') as f:
-        json.dumb(users, f)
+        json.dump(users, f)
   
 @client.event
 async def on_message(message):
@@ -31,7 +31,7 @@ async def on_message(message):
                         
     
     with open ('users.json', 'w') as f:
-        json.dumb(users, f)
+        json.dump(users, f)
         
 async def update_data(users, user):
     if not user.id in users:
