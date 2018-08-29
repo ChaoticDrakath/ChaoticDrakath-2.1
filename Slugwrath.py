@@ -63,9 +63,9 @@ async def level_up(users, user, channel):
 @bot.command(pass_context=True)
 @commands.has_permissions(send_messages=True)
 async def rank(ctx):
-    user = ctx.message.author.mention
+    user = user.mention
     level = lvl_end
-    exp = users[ctx.message.author.id]['experience']
+    exp = users[user.id]['experience']
     await bot.say(f"{user} your current rank is {level} and you currently have {exp}.")
    
                      
