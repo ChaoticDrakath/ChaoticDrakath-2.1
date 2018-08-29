@@ -4,7 +4,7 @@ import json
 import os
 from discord.ext import commands
 
-bot = commands.Bot(command_prefix='immortal ', description="hey")
+bot = commands.Bot(command_prefix='immortal ')
 
 @bot.event
 async def on_ready():
@@ -63,7 +63,7 @@ async def level_up(users, user, channel):
 @bot.command(pass_context=True)
 @commands.has_permissions(send_messages=True)
 async def rank(ctx):
-    await bot.send_message("{} your current rank is {} and you currently have {}.".format(user.mention, lvl_end, users[user.id]['experience']))
+    await bot.send_message("{} your current rank is {} and you currently have {}.".format(user.mention, lvl_end, exp))
    
                      
 bot.run(os.getenv('Token'))
