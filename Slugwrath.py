@@ -66,7 +66,7 @@ async def rank(ctx):
     mention = user.mention
     lvl = lvl_end
     exp = experience
-    await bot.say(f'{mention} you currently are rank ```{lvl}``` and have ```{exp}```experience.')
+    await bot.say(f'{mention} you currently are rank {lvl} and have {exp} experience.')
    
                      
 bot.run(os.getenv('Token'))
