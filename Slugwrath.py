@@ -14,12 +14,6 @@ async def on_ready():
     print('------')
     
     
- async def on_ready():
-     print user.mention
-     print lvl_start
-     print experience
-
-
 @bot.event
 async def on_ready():
     print('bot online')
@@ -69,9 +63,9 @@ async def level_up(users, user, channel):
 @bot.command(pass_context=True)
 @commands.has_permissions(send_messages=True)
 async def rank(ctx):
-    mention = user.mention
-    lvl = lvl_end
-    exp = experience
+    print('user.mention')
+    print('lvl_end')
+    print('experience')
     print(f'{mention} you currently are rank {lvl} and have {exp} experience.')
    
                      
