@@ -63,7 +63,10 @@ async def level_up(users, user, channel):
 @bot.command(pass_context=True)
 @commands.has_permissions(send_messages=True)
 async def rank(ctx):
-    await bot.say("{} your current rank is {} and you currently have {} exp.".format(user.mention, lvl_end, experience))
+    mention = user.mention
+    lvl = lvl_end
+    exp = experience
+    await bot.say(f'{mention} you currently are rank ```{lvl}``` and have ```{exp}```experience.')
    
                      
 bot.run(os.getenv('Token'))
