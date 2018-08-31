@@ -66,7 +66,6 @@ async def rank(ctx):
     print('user.mention')
     print('lvl_end')
     print('experience')
-    print(f'{mention} you currently are rank {lvl} and have {exp} experience.')
    
                      
 bot.run(os.getenv('Token'))
