@@ -12,6 +12,12 @@ async def on_ready():
     print(bot.user.name)
     print(bot.user.id)
     print('------')
+    
+    
+ async def on_ready():
+     print user.mention
+     print lvl_start
+     print experience
 
 
 @bot.event
