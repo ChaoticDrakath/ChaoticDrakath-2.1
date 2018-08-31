@@ -6,7 +6,7 @@ from discord.ext import commands
 
 bot = commands.Bot(command_prefix='immortal ')
 
-@bot.event
+
 async def on_ready():
     print('Logged in as')
     print(bot.user.name)
