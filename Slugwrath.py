@@ -4,7 +4,7 @@ import json
 import os
 from discord.ext import commands
 
-bot = commands.Bot(command_prefix='immortal ')
+bot = commands.Bot(command_prefix='Dark Shroom ')
 
 
 async def on_ready():
